@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+
+<body>
+   <script type="text/javascript">
+   
+  var clicks = 0;   //creamos una variable global llamada clicks con valor inicial 0
+  
+  function cuentaClicks() {
+  clicks += 1;   //tambien hubiera funcionado si se ppone clicks = clicks + 1;
+  document.getElementById("clicks").innerHTML = clicks;
+  //muestra en la web el valor de clicks con la variable clicks
+ };
+ 
+setTimeout(() => {
+  alert("Tu puntuación es: "+clicks); //Muestra puntos
+  document.getElementById("miboton").disabled;
+  }, "10000");  //Esta en milisegundos 10 * 1000 es 10k.
+  </script>
+  
+  <!-- Boton que cada vez que se pulsa, llama a la función cuentaClicks -->
+  <button id="miboton" type="button" onClick="cuentaClicks()">Haz click</button>
+  
+  <p>Numero de clicks: <a id="clicks">0</a></p>
+  
+  
+</body>
+</html>
